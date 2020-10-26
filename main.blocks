@@ -1,0 +1,61 @@
+<xml xmlns="https://developers.google.com/blockly/xml"><variables><variable type="KIND_SpriteKind" id="o7qfoG_+Tet4%Yv3R*aP">Player</variable><variable type="KIND_SpriteKind" id="MDvn]p/S@Kyr=q/.5/ac">Projectile</variable><variable type="KIND_SpriteKind" id="Rf!J*NW{:TDEqTTF),F=">Food</variable><variable type="KIND_SpriteKind" id="o9H2aJTZt)b`0DW#RnAR">Enemy</variable><variable type="KIND_SpriteKind" id="?U0.)DA-X8X}5_|dL@1*">whitekey</variable><variable id="B3n@7Q}F1%r=]SZR=q4C">Jeff da dog</variable><variable id="|_dx%6a}X-;}5O!a9/sh">d note</variable><variable id="g-@e?uL1o8r5:v=}+bhE">c note</variable><variable id="-6]}pokf6zJC,BE6~tv-">mySprite</variable><variable id="Lds.hUzoU4eQ29W:`d7|">note e</variable><variable id="5uQ}P_eOD:NY^iFba}a%">note f</variable><variable id="Af9/fg6JrzuaQ.-!IGD.">OtherSprite</variable></variables><block type="pxt-on-start" x="0" y="0"><statement name="HANDLER"><block type="tilemap_editor"><field name="tilemap">tiles.createTilemap(hex`280008000000000000000000000000000000000000000000000000000000000000000000000000000000040400000000000000000000000000000000000000000000000000000000000000000000000000000404000000000000000000000000000000000000000000000000000000000000000000000000000004040000000000000001010100000000000000000000000000000000000000000000000000000000040400000000000001000001020300000000000000000200030000000000000200000000000000000404000000000001000000010101010101010101010101010101010101010101010100000000000404040000000001000000000000000000000000000000000000000000000000000000000000000404040401010101010101010101010101010101010101010101010101010101010101010101010404040404`, img`
+......................................22
+......................................22
+......................................22
+.......222............................22
+......2..2............................22
+.....2...22222222222222222222222.....222
+....2...............................2222
+2222222222222222222222222222222222222222
+`, [myTiles.transparency16,sprites.dungeon.collectibleInsignia,sprites.dungeon.collectibleRedCrystal,sprites.dungeon.collectibleBlueCrystal,sprites.builtin.brick], TileScale.Sixteen)</field><next><block type="gamesetbackgroundcolor"><value name="color"><shadow type="colorindexpicker"><field name="index">10</field></shadow></value><next><block type="variables_set"><field name="VAR" id="B3n@7Q}F1%r=]SZR=q4C">Jeff da dog</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="corgiCreate"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="updateSprite"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="corgio"><block type="variables_get"><field name="VAR" id="B3n@7Q}F1%r=]SZR=q4C">Jeff da dog</field></block></value><next><block type="followCorgi"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="corgio"><block type="variables_get"><field name="VAR" id="B3n@7Q}F1%r=]SZR=q4C">Jeff da dog</field></block></value><next><block type="verticalMovement"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="corgio"><block type="variables_get"><field name="VAR" id="B3n@7Q}F1%r=]SZR=q4C">Jeff da dog</field></block></value><next><block type="horizontalMovement"><mutation xmlns="http://www.w3.org/1999/xhtml" _expanded="0" _input_init="false"></mutation><value name="corgio"><block type="variables_get"><field name="VAR" id="B3n@7Q}F1%r=]SZR=q4C">Jeff da dog</field></block></value><next><block type="variables_set"><field name="VAR" id="g-@e?uL1o8r5:v=}+bhE">c note</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . f f f f f f f f . . . . 
+. . f f d d d d d d d d f f . . 
+. f d d d d d d d d d d d d f . 
+. f d d d d d d d d d d d d f . 
+f d d d d d d d d d d d d d d f 
+f d d d 1 f d d d d 1 f d d d f 
+f d d d d d d d d d d d d d d f 
+f d d d d d d d d d d d d d d f 
+f d d d d d f d d f d d d d d f 
+f d d d d d f d d f d d d d d f 
+f d d d d d d d d d d d d d d f 
+f d d f d d d d d d d d f d d f 
+f d d d f f f f f f f f d d d f 
+f d d d d d 1 d d 1 d d d d d f 
+f d d d d d d d d d d d d d d f 
+. f f f f f f f f f f f f f f . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">whitekey</field></shadow></value></block></value><next><block type="mapplaceontile"><value name="sprite"><block type="variables_get"><field name="VAR" id="g-@e?uL1o8r5:v=}+bhE">c note</field></block></value><value name="loc"><shadow type="mapgettile"><value name="col"><shadow type="math_number"><field name="NUM">13</field></shadow></value><value name="row"><shadow type="math_number"><field name="NUM">4</field></shadow></value></shadow></value><next><block type="variables_set"><field name="VAR" id="|_dx%6a}X-;}5O!a9/sh">d note</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . 7 . . . . . . . . . 
+. . . . . 7 . . . . . . . . . . 
+. . . . . 7 . . . . . . . . . . 
+. . . . . . 7 . . 7 7 . . . . . 
+. . 1 . 1 . 7 . . 7 . . . . . . 
+. . . f . . 7 . . . 7 . . . . . 
+. . . . . . . . . . 7 . 1 . 1 . 
+. . . . . . . . . . 7 . . f . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . e . . . . . . . . 
+. . . . . . . e e . . . . . . . 
+. . . . . . e e e e e . . . . . 
+. . . . e e e e e e e e . . . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">whitekey</field></shadow></value></block></value><next><block type="mapplaceontile"><value name="sprite"><block type="variables_get"><field name="VAR" id="|_dx%6a}X-;}5O!a9/sh">d note</field></block></value><value name="loc"><shadow type="mapgettile"><value name="col"><shadow type="math_number"><field name="NUM">15</field></shadow></value><value name="row"><shadow type="math_number"><field name="NUM">4</field></shadow></value></shadow></value><next><block type="variables_set"><field name="VAR" id="Lds.hUzoU4eQ29W:`d7|">note e</field><value name="VALUE"><shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate"><value name="img"><shadow type="screen_image_picker"><field name="img">img`
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . . . . . . . . . . . 
+. . . . . . f . . . . . . . . . 
+. f f f . . . . . f f . f f . . 
+. . f . . . f . . f . f . f . . 
+. . f . . . f . . f . . . f . . 
+. . f . . . f . . f . . . f . . 
+. f f . . . f . . f . . . f . . 
+`</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">whitekey</field></shadow></value></block></value><next><block type="mapplaceontile"><value name="sprite"><block type="variables_get"><field name="VAR" id="Lds.hUzoU4eQ29W:`d7|">note e</field></block></value><value name="loc"><shadow type="mapgettile"><value name="col"><shadow type="math_number"><field name="NUM">17</field></shadow></value><value name="row"><shadow type="math_number"><field name="NUM">4</field></shadow></value></shadow></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></statement></block><block type="spritesoverlap" x="550" y="430"><value name="HANDLER_DRAG_PARAM_sprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">sprite</field></shadow></value><value name="kind"><shadow type="spritekind"><field name="MEMBER">Player</field></shadow></value><value name="HANDLER_DRAG_PARAM_otherSprite"><shadow type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></shadow></value><value name="otherKind"><shadow type="spritekind"><field name="MEMBER">whitekey</field></shadow></value><statement name="HANDLER"><block type="controls_if"><mutation elseif="2"/><value name="IF0"><shadow type="logic_boolean"><field name="BOOL">TRUE</field></shadow><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number" disabled="true"><field name="NUM">0</field></shadow><block type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></block></value><value name="B"><shadow type="math_number" disabled="true"><field name="NUM">0</field></shadow><block type="variables_get"><field name="VAR" id="g-@e?uL1o8r5:v=}+bhE">c note</field></block></value></block></value><statement name="DO0"><block type="mixer_play_sound"><field name="sound">music.pewPew</field></block></statement><value name="IF1"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get"><field name="VAR" id="|_dx%6a}X-;}5O!a9/sh">d note</field></block></value></block></value><statement name="DO1"><block type="mixer_play_sound"><field name="sound">music.magicWand</field></block></statement><value name="IF2"><block type="logic_compare"><field name="OP">EQ</field><value name="A"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="argument_reporter_custom"><mutation typename="Sprite"/><field name="VALUE">otherSprite</field></block></value><value name="B"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="variables_get"><field name="VAR" id="Lds.hUzoU4eQ29W:`d7|">note e</field></block></value></block></value><statement name="DO2"><block type="mixer_play_sound"><field name="sound">music.baDing</field></block></statement></block></statement></block></xml>
